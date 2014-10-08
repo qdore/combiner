@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/menu_icon.tiff</file>
+        <file>icon/menu_icon_disabled.tiff</file>
+    </qresource>
+</RCC>
