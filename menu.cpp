@@ -57,6 +57,10 @@ void menu::fun_stop()
     command = command + PASSWORD +\
             "| sudo -S networksetup -setautoproxystate 'Wi-Fi' off";
     system(command.c_str());
+    command = "echo ";
+    command = command + PASSWORD +\
+                "| sudo -S networksetup -setautoproxystate 'Thunderbolt Ethernet' off";
+    system(command.c_str());
 
     start->setDisabled(false);
     stop->setDisabled(true);
@@ -95,7 +99,11 @@ void menu::fun_start()
             "| sudo -S networksetup -setautoproxyurl 'Wi-Fi' 'http://127.0.0.1:" +\
             GOAGENTPORT + "/proxy.pac'";
     system(command.c_str());
-
+    command = "echo ";
+    command = command + PASSWORD +\
+            "| sudo -S networksetup -setautoproxyurl 'Thunderbolt Ethernet' 'http://127.0.0.1:" +\
+            GOAGENTPORT + "/proxy.pac'";
+    system(command.c_str());
     start->setDisabled(true);
     stop->setDisabled(false);
 
