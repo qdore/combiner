@@ -1,4 +1,10 @@
 #include "systemtrayicon.h"
+#include "server/server.hpp"
+#include "config.h"
+#include <iostream>
+#include <string>
+#include <boost/asio.hpp>
+#include <thread>
 #include <QApplication>
 
 int main(int argc, char *argv[])

@@ -7,18 +7,14 @@
 #define ICON ":/icon/icon/menu_icon.tiff"
 #define DISABLEDICON ":/icon/icon/menu_icon_disabled.tiff"
 
+#define CONFIGFILE "../config.ini"
 #define SHADOW "/usr/local/bin/ss-local"
-#define SHADOWPORT "1080"
-
-#define SHADOWADDRESS "mdss01.mengsky.net"
-#define SHADOWSERVERPORT "50941"
-#define SHADOWPASSWORD "30391899"
-#define SHADOWMETHOD "aes-256-cfb"
-
-#define PROXYPY (QCoreApplication::applicationDirPath().toStdString() + "/../Resources/local/proxy.py").c_str()
-#define GOAGENTPORT "8086"
+#define SHADOWLOCALPORT 10800
+#define HTTPPORT 17776
 
 #define PASSWORD "QWlvhb1314"
+
+extern std::string proxy_message;
 
 
 #endif // CONFIG_H
